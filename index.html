@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10130f">
+  <meta name="description" content="BlockBuy — a curated community marketplace for Minecraft builds, skins, server cosmetics and creator-made gear.">
+  <title>BlockBuy — Find your next world</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement"><span class="pulse"></span> THE COMMUNITY MARKETPLACE FOR MINECRAFT <span class="announce-right">CURATED FOR YOUR NEXT ADVENTURE ↗</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="BlockBuy home"><span class="brand-mark">B<span>+</span></span><span>BLOCK<span class="brand-light">BUY</span><small>THE PLAYER-POWERED MARKET</small></span></a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#marketplace">Marketplace</a>
+      <a class="nav-link" href="#categories">Categories</a>
+      <a class="nav-link" href="#creators">Creators</a>
+      <a class="nav-link" href="#sell">Sell on BlockBuy</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="themeToggle" aria-label="Toggle colour theme" title="Toggle theme">◐</button>
+      <button class="bag-button" id="bagButton">Saved <span id="savedCount">0</span></button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> MADE FOR THE MINECRAFT COMMUNITY</div>
+        <h1>Your next world<br>starts <span>right here.</span></h1>
+        <p class="hero-lede">Discover standout builds, skins, server cosmetics and creator-made gear. Find your next favourite thing — or share something you made.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#marketplace">Explore marketplace <span>↗</span></a>
+          <a class="button button-quiet" href="#sell">I'm a creator <span>↗</span></a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack"><span>A</span><span>N</span><span>C</span><span>+</span></div>
+          <div><strong>A community built on creativity</strong><small>Discover independent creator-made content</small></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Stylized block world artwork">
+        <div class="art-grid"></div>
+        <div class="art-label art-label-top"><span class="tiny-dot"></span> WORLD / 001 <span>CURATED DROP</span></div>
+        <div class="pixel-sun"></div>
+        <div class="floating-chip chip-one">✦ BUILT DIFFERENT</div>
+        <div class="floating-chip chip-two">JAVA + BEDROCK</div>
+        <div class="block-scene">
+          <div class="block block-back"></div><div class="block block-mid"></div><div class="block block-front"></div>
+          <div class="block block-small"></div><div class="block block-grass"></div>
+        </div>
+        <div class="art-bottom"><div><small>THE NEXT CHAPTER</small><strong>YOURS TO DISCOVER.</strong></div><span>↗</span></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Marketplace highlights"><div class="ticker-track"><span>BUILDS THAT INSPIRE</span><b>✳</b><span>SKINS WITH PERSONALITY</span><b>✳</b><span>CREATORS TO KNOW</span><b>✳</b><span>YOUR NEXT ADVENTURE</span><b>✳</b><span>BUILDS THAT INSPIRE</span><b>✳</b><span>SKINS WITH PERSONALITY</span><b>✳</b></div></section>
+
+    <section class="section shell quick-section" id="quicklinks">
+      <div class="section-heading"><div><div class="eyebrow">SKIP THE SCROLL</div><h2>Where do you want to go<span class="green">?</span></h2></div><p>Less digging. More discovering.<br>Your next move is one click away.</p></div>
+      <div class="quick-grid">
+        <a class="quick-card" href="#marketplace"><span class="quick-icon">⌕</span><span class="quick-number">01 / DISCOVER</span><h3>Browse everything</h3><p>Explore the full marketplace.</p><span class="card-arrow">↗</span></a>
+        <a class="quick-card" href="#categories"><span class="quick-icon">▦</span><span class="quick-number">02 / EXPLORE</span><h3>Explore categories</h3><p>Builds, skins, maps and more.</p><span class="card-arrow">↗</span></a>
+        <a class="quick-card" href="#creators"><span class="quick-icon">✳</span><span class="quick-number">03 / CONNECT</span><h3>Meet creators</h3><p>Find the people behind the drops.</p><span class="card-arrow">↗</span></a>
+        <a class="quick-card quick-card-dark" href="#sell"><span class="quick-icon">＋</span><span class="quick-number">04 / MAKE YOUR MARK</span><h3>Start selling</h3><p>Put your creativity on the map.</p><span class="card-arrow">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section marketplace-section" id="marketplace">
+      <div class="shell">
+        <div class="section-heading marketplace-heading"><div><div class="eyebrow">THE GOOD STUFF</div><h2>Featured <span class="green">drops.</span></h2><p class="section-subtitle">A hand-picked starting point for your next build, look or server.</p></div><div class="market-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search the marketplace…" aria-label="Search listings"><kbd>/</kbd></label><button class="filter-button" id="filterToggle">Filters <span>☷</span></button></div></div>
+        <div class="filter-row" id="filterRow">
+          <div class="filter-pills" id="categoryFilters">
+            <button class="filter-pill selected" data-category="All">Everything <span class="pill-count" id="allCount">08</span></button>
+            <button class="filter-pill" data-category="Builds">Builds</button>
+            <button class="filter-pill" data-category="Skins">Skins</button>
+            <button class="filter-pill" data-category="Maps">Maps</button>
+            <button class="filter-pill" data-category="Server items">Server items</button>
+          </div>
+          <div class="filter-controls"><select id="editionFilter" aria-label="Filter by edition"><option value="All">Java + Bedrock</option><option value="Java">Java Edition</option><option value="Bedrock">Bedrock Edition</option><option value="Both">Both editions</option></select><select id="sortSelect" aria-label="Sort listings"><option value="featured">Sort: Featured</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option><option value="name">Name: A to Z</option></select></div>
+        </div>
+        <div class="results-line"><span id="resultsLabel">Showing curated picks</span><span class="demo-label"><span class="tiny-dot"></span> SAMPLE LISTINGS</span></div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        <div class="empty-state hidden" id="emptyState"><div class="empty-icon">⌕</div><h3>No drops found.</h3><p>Try a different search or clear your filters.</p><button class="button button-primary" id="clearFilters">Clear filters</button></div>
+        <div class="marketplace-bottom"><p>These are sample listings to demonstrate the experience. Verify creator rights and listing details before enabling real sales.</p><a href="#categories" class="text-link">Explore all categories ↗</a></div>
+      </div>
+    </section>
+
+    <section class="section shell categories-section" id="categories">
+      <div class="section-heading"><div><div class="eyebrow">FIND YOUR LANE</div><h2>Explore by <span class="green">category.</span></h2></div><p>Whatever your world needs,<br>start with the right collection.</p></div>
+      <div class="category-grid">
+        <button class="category-card cat-builds" data-jump-category="Builds"><span class="cat-index">01</span><span class="cat-symbol">▧</span><h3>Builds & worlds</h3><span>Structures, maps, inspiration</span><b>↗</b></button>
+        <button class="category-card cat-skins" data-jump-category="Skins"><span class="cat-index">02</span><span class="cat-symbol">◈</span><h3>Skins & style</h3><span>Make your player yours</span><b>↗</b></button>
+        <button class="category-card cat-maps" data-jump-category="Maps"><span class="cat-index">03</span><span class="cat-symbol">⌖</span><h3>Maps & adventures</h3><span>New places to explore</span><b>↗</b></button>
+        <button class="category-card cat-server" data-jump-category="Server items"><span class="cat-index">04</span><span class="cat-symbol">✳</span><h3>Server essentials</h3><span>Ranks, cosmetics and extras</span><b>↗</b></button>
+      </div>
+    </section>
+
+    <section class="creator-band" id="sell"><div class="shell creator-band-inner"><div><div class="eyebrow">FOR THE WORLD BUILDERS</div><h2>Your creations deserve<br><span>a stage.</span></h2><p>Made something worth sharing? Start with a listing draft, show your work clearly and help players understand what makes it special.</p><div class="hero-actions"><button class="button button-primary" id="openSell">Open Creator Studio <span>↗</span></button><a class="button button-outline" href="#how-it-works">How it works</a></div></div><div class="creator-visual"><div class="creator-orbit orbit-one"></div><div class="creator-orbit orbit-two"></div><div class="creator-stamp">BUILT<br>BY YOU<span>✳</span></div><div class="creator-stat"><small>YOUR NEXT DROP</small><strong>Start with an idea.</strong><span>Make it a world.</span></div></div></div></section>
+
+    <section class="section shell creators-section" id="creators"><div class="section-heading"><div><div class="eyebrow">PEOPLE BEHIND THE PIXELS</div><h2>Creators worth <span class="green">knowing.</span></h2></div><a href="#sell" class="text-link">Become a creator ↗</a></div><div class="creator-grid">
+      <article class="creator-card"><div class="creator-avatar avatar-a">A<span>✳</span></div><div><h3>AxolotlWorks <span class="verified">✓</span></h3><p>Worlds and server essentials</p><small>CREATOR SPOTLIGHT / 001</small></div><span class="creator-arrow">↗</span></article>
+      <article class="creator-card"><div class="creator-avatar avatar-b">N<span>✳</span></div><div><h3>NovaBuilds <span class="verified">✓</span></h3><p>Detailed builds and maps</p><small>CREATOR SPOTLIGHT / 002</small></div><span class="creator-arrow">↗</span></article>
+      <article class="creator-card"><div class="creator-avatar avatar-c">C<span>✳</span></div><div><h3>CraftedRealm <span class="verified">✓</span></h3><p>Skins and player style</p><small>CREATOR SPOTLIGHT / 003</small></div><span class="creator-arrow">↗</span></article>
+    </div><p class="micro-note">Creator profiles above are illustrative examples, not verified real sellers.</p></section>
+
+    <section class="section shell how-section" id="how-it-works"><div class="section-heading"><div><div class="eyebrow">SIMPLE BY DESIGN</div><h2>Good things happen<br><span class="green">in three steps.</span></h2></div><p>Clear listings. Better discovery.<br>A community that creates together.</p></div><div class="steps-grid"><article><span>01</span><div class="step-icon">⌕</div><h3>Discover</h3><p>Search, filter and explore listings by category and edition.</p></article><article><span>02</span><div class="step-icon">◇</div><h3>Check the details</h3><p>Review compatibility, creator information and what's included.</p></article><article><span>03</span><div class="step-icon">✳</div><h3>Support creators</h3><p>Use the creator's stated process and stay mindful of marketplace safety.</p></article></div></section>
+
+    <section class="safety-strip"><div class="shell safety-inner"><div class="safety-icon">✓</div><div><strong>Play fair. Create responsibly.</strong><p>BlockBuy is an independent community marketplace concept. Listings shown here are samples; no payments or in-game delivery are enabled.</p></div><a href="#footer">Read our notes ↗</a></div></section>
+  </main>
+
+  <footer id="footer"><div class="shell footer-main"><div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark">B<span>+</span></span><span>BLOCK<span class="brand-light">BUY</span><small>THE PLAYER-POWERED MARKET</small></span></a><p>Find your next world.<br>Share what you create.</p></div><div class="footer-col"><strong>Explore</strong><a href="#marketplace">Marketplace</a><a href="#categories">Categories</a><a href="#creators">Creators</a></div><div class="footer-col"><strong>For creators</strong><a href="#sell">Creator Studio</a><a href="#how-it-works">How it works</a><a href="#sell">Start a listing</a></div><div class="footer-col"><strong>Good to know</strong><a href="#footer" id="aboutLink">About BlockBuy</a><a href="#footer" id="safetyLink">Help & safety</a><span>Independent fan concept</span></div></div><div class="shell footer-bottom"><span>© <span id="year"></span> BLOCKBUY. MADE FOR THE COMMUNITY.</span><span>NOT AFFILIATED WITH MOJANG OR MICROSOFT.</span><a href="#home">BACK TO TOP ↑</a></div></footer>
+
+  <dialog id="listingDialog" class="modal"><button class="modal-close" data-close="listingDialog" aria-label="Close">×</button><div id="listingDetail"></div></dialog>
+  <dialog id="sellDialog" class="modal sell-modal"><button class="modal-close" data-close="sellDialog" aria-label="Close">×</button><div class="modal-eyebrow">CREATOR STUDIO / NEW LISTING</div><h2>Draft your next <span class="green">drop.</span></h2><p class="modal-intro">Create a local draft to preview your listing. It stays in this browser and is not published or sent to a server.</p><form id="sellForm" class="sell-form">
+    <label>Listing title<input name="title" required maxlength="70" placeholder="e.g. Cozy Forest Starter Base"></label>
+    <div class="form-two"><label>Category<select name="category" required><option value="Builds">Builds</option><option value="Skins">Skins</option><option value="Maps">Maps</option><option value="Server items">Server items</option></select></label><label>Edition<select name="edition" required><option>Both</option><option>Java</option><option>Bedrock</option></select></label></div>
+    <div class="form-two"><label>Price (USD)<input name="price" type="number" min="0" step="0.01" required placeholder="0.00"></label><label>Creator name<input name="creator" required maxlength="40" placeholder="Your creator name"></label></div>
+    <label>What's included?<textarea name="description" required maxlength="500" rows="3" placeholder="Describe the item, compatibility and what's included…"></textarea></label>
+    <div class="form-actions"><button class="button button-primary" type="submit">Save local draft ↗</button><button class="button button-quiet" type="button" data-close="sellDialog">Cancel</button></div><p class="form-note">Do not include personal contact details. Never claim official affiliation or sell content you don't have rights to.</p>
+  </form></dialog>
+  <dialog id="savedDialog" class="modal"><button class="modal-close" data-close="savedDialog" aria-label="Close">×</button><div class="modal-eyebrow">YOUR SHORTLIST</div><h2>Saved <span class="green">drops.</span></h2><div id="savedItems"></div><button class="button button-quiet" data-close="savedDialog">Keep exploring</button></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
